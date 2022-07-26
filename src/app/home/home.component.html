@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div></div>
+
+    <div class="container">
+      <br /><br />
+      <h4 class="total">All Items</h4>
+      <p class="text-center">
+        Note: Only admin user have access to add fruits in basket
+      </p>
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-md-4" *ngFor="let item of fruits">
+          <div class="shop-wrapper shop-03-wrapper pos-rel text-center mb-30">
+            <div class="shop-img">
+              <img src="{{ item.img }}" />
+            </div>
+
+            <div class="shop-text">
+              <h4>{{ item.title }}</h4>
+            </div>
+            <h4 class="total">{{ item.total }}</h4>
+
+            <span
+              ><button class="button plus" (click)="addToBasket(item.id)">
+                +
+              </button>
+              <button class="button minus" (click)="removeFromBasket(item.id)">
+                -
+              </button></span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <h4 class="total">Basket Stack</h4>
+          <ul class="basket__list">
+            <li
+              *ngFor="let item of basket"
+              [ngStyle]="{ 'background-color': item.color }"
+            >
+              {{ item.title }}
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <br /><br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <br /><br />
+      <div class="form-signin">
+        <div class="text-center">
+          <div class="logo-holder logo-4">
+            <h3>Fruits</h3>
+            <p>Stack Basket</p>
+          </div>
+        </div>
+
+        <div class="input-group-login sombreado-input">
+          <div class="input-group-prepend-login">
+            <span class="input-group-text fondo-icon">
+              <i class="fa fa-user"></i>
+            </span>
+          </div>
+          <input
+            type="text"
+            placeholder="Username"
+            class="border-0-login form-control-login input-border-none"
+            [(ngModel)]="username"
+          />
+        </div>
+
+        <br />
+        <div class="input-group-login sombreado-input">
+          <div class="input-group-prepend-login">
+            <span class="input-group-text fondo-icon">
+              <i class="fa fa-lock"></i>
+            </span>
+          </div>
+          <input
+            type="password"
+            [(ngModel)]="password"
+            class="border-0-login form-control-login input-border-none"
+            placeholder="Password"
+          />
+        </div>
+
+        <br />
+        <p class="text-center">
+          <button class="button-signup fondo-color-signup" (click)="onSubmit()">
+            <b>SIGNUP</b>
+          </button>
+        </p>
+        <br />
+        <br />
+        <p class="text-center credentials">username: Admin - password: Admin</p>
+        <p class="text-center credentials">
+          username: testuser - password: testuser
+        </p>
+
+        <!-- <p class="text-center">Alredy have an Account? Sign in</p>
+        <p class="text-center">OR</p>
+          <div class="icons-position">
+  
+            <a href="#" class="icon-social">
+            <p class="text-center">
+              <i class="fab fa-facebook-f fa-lg" style="color:#A00836;"></i>
+            </p>
+          </a>
+  
+          <a href="#" class="icon-social">
+            <p class="text-center">
+              <i class="fab fa-github fa-lg" style="color:#A00836;"></i>
+            </p>
+          </a>
+  
+          <a href="#" class="icon-social">
+            <p class="text-center">
+              <i class="fab fa-google fa-lg" style="color:#A00836;"></i>
+            </p>
+          </a>
+          
+          </div>
+   -->
+      </div>
+    </div>
+  </body>
+</html>
